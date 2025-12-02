@@ -1,0 +1,9 @@
+[package]
+name = "a"
+version = "0.1.0"
+edition = "2024"
+authors = [
+    "Matthew Scroggs <rust@mscroggs.co.uk>",
+]
+description = "Minimum failing example for std::path::absolute."
+license = "CC0"
