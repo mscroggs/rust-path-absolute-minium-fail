@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        rust-version: ["stable"]
+        rust-version: ["stable", "nightly", "beta"]
     steps:
       - name: Set up Rust
         uses: actions-rust-lang/setup-rust-toolchain@v1
@@ -18,4 +18,4 @@ jobs:
           toolchain: ${{ matrix.rust-version }}
       - uses: actions/checkout@v4
       - name: Run tests
-        run: cargo test
+        run: RUST_BACKTRACE=1 cargo test
